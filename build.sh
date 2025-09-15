@@ -1,3 +1,3 @@
 #!/bin/bash
 
-gcc -g -Wall -Werror -Wextra *.c -o open_read
+gcc -g -Werror -Wall -Wextra src/*.c -o main -nostdlib
