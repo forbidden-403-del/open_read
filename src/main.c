@@ -1,14 +1,15 @@
 #include "include/mstd.h"
 
-void write_char(char ch) {
-	sysWrite(1, &ch, 1);
+int stringlen(char *str) {
+	int i = 0;
+	while(str[i])
+		i++;
+	return i;
 }
 
 void print(char *str) {
-	while (*str) {
-		write_char(*str);
-		str++;
-	}
+	int len = stringlen(str);
+	sysWrite(1, str, len);
 }
 
 void _start() {

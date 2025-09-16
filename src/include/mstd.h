@@ -9,7 +9,7 @@
 
 #define BUF_SZ 1024
 
-typedef unsigned size_t;
+typedef __SIZE_TYPE__ size_t;
 typedef long ssize_t;
 
 void sysWrite(unsigned fd, const char *buf, size_t count);
